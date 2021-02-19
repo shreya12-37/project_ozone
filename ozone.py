@@ -6,6 +6,7 @@ import filecmp
 import subprocess 
 from subprocess import CalledProcessError, TimeoutExpired 
 
+
 app = Flask(__name__)
 
 STATUS_CODES = {
@@ -22,13 +23,13 @@ STATUS_CODES = {
 @app.route("/practice_problem")
 class Program:
 
-	def __init__(self, filename, inputfile, timelimit, expectedoutput):
+	def __init__(self, filename, inputfile, timelimit, expectedoutputfile):
 		self.filename = filename
 		self.language = None
 		self.name = None
-		self.inputfile = inputfile
-		self.expectedoutput = expectedoutput
-		self.actualOutput = "calculatedoutput.txt"
+		self.inputFile = inputfile
+		self.expectedoutputFile = expectedoutputfile
+		self.actualOutputFile = "calculatedoutput.txt"
 		self.timelimit = timelimit
 
 	def isvalidfile(self):
@@ -42,7 +43,7 @@ class Program:
 		return False
 
 
-	def compile(slef):
+
 
 		
 
